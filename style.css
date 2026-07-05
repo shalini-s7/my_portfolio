@@ -1,0 +1,306 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins", sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#fff;
+    color:#000;
+    overflow-x:hidden;
+}
+
+/* HEADER */
+
+.header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:18px 10%;
+    background:#000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    z-index:100;
+}
+
+.logo{
+    color:white;
+    text-decoration:none;
+    font-size:28px;
+    font-weight:700;
+}
+
+.navbar a{
+    display:inline-block;
+    margin-left:20px;
+    padding:8px 20px;
+    border:2px solid white;
+    border-radius:25px;
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.navbar a:hover{
+    background:forestgreen;
+    border-color:forestgreen;
+}
+
+/* HOME */
+
+.home{
+    min-height:90vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:100px 10% 50px;
+    gap:60px;
+}
+
+.home-content{
+    max-width:650px;
+}
+
+.home-content h3{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.home-content h1{
+    font-size:52px;
+    margin-bottom:15px;
+}
+
+.home-content p{
+    font-size:18px;
+    line-height:1.7;
+    margin-top:15px;
+}
+
+.image img{
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    object-fit:cover;
+    box-shadow:0 0 30px rgba(0,0,0,.3);
+}
+
+/* COMMON SECTION */
+
+.about,
+.skills,
+.working,
+.education,
+.contact{
+    padding:80px 10%;
+    min-height:auto;
+}
+
+.about,
+.skills,
+.working,
+.contact{
+    background:#f8f8f8;
+}
+
+.education{
+    background:white;
+}
+
+.about h2,
+.skills h2,
+.working h2,
+.education h2,
+.contact h2{
+    font-size:45px;
+    margin-bottom:30px;
+    text-align:center;
+}
+
+/* ABOUT */
+
+.about p{
+    max-width:750px;
+    margin:auto;
+    font-size:20px;
+    line-height:1.7;
+    text-align:center;
+}
+
+/* SKILLS */
+
+.slider{
+    overflow:hidden;
+}
+
+.slide-track{
+    display:flex;
+    gap:20px;
+    width:max-content;
+    animation:scroll 20s linear infinite;
+}
+
+.skill-card{
+    min-width:180px;
+    height:110px;
+    background:white;
+    border-radius:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:22px;
+    font-weight:600;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+@keyframes scroll{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-50%);
+    }
+}
+
+/* WORKING */
+
+.working-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.working-card{
+    width:300px;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.working-card h3{
+    margin-bottom:15px;
+    color:forestgreen;
+}
+
+.working-card p{
+    line-height:1.7;
+}
+
+/* EDUCATION */
+
+.education-card{
+    max-width:600px;
+    margin:auto;
+    padding:40px;
+    border-radius:15px;
+    background:#f8f8f8;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+    text-align:center;
+}
+
+.education-card h3{
+    margin-bottom:15px;
+    color:forestgreen;
+}
+
+.education-card p{
+    margin:10px 0;
+    font-size:18px;
+}
+
+/* CONTACT */
+
+.contact-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.contact-container a{
+    text-decoration:none;
+    color:black;
+    border:2px solid black;
+    padding:15px 30px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.contact-container a:hover{
+    background:forestgreen;
+    color:white;
+    border-color:forestgreen;
+}
+
+/* FOOTER */
+
+.footer{
+    background:black;
+    text-align:center;
+    padding:20px;
+}
+
+.footer p{
+    color:white;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .header{
+        flex-direction:column;
+        gap:15px;
+        padding:15px;
+    }
+
+    .navbar a{
+        margin:5px;
+        padding:7px 15px;
+    }
+
+    .home{
+        flex-direction:column-reverse;
+        text-align:center;
+        padding:150px 8% 50px;
+        gap:40px;
+    }
+
+    .home-content h1{
+        font-size:40px;
+    }
+
+    .home-content h3{
+        font-size:24px;
+    }
+
+    .image img{
+        width:240px;
+        height:240px;
+    }
+
+    .about,
+    .skills,
+    .working,
+    .education,
+    .contact{
+        padding:60px 8%;
+    }
+
+    .about h2,
+    .skills h2,
+    .working h2,
+    .education h2,
+    .contact h2{
+        font-size:36px;
+    }
+}
